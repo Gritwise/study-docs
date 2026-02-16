@@ -33,23 +33,23 @@ jobs:
         working-directory: ./hands-on
         run: npx slidev build --base /study-docs/hands-on/ --out dist
 
-      # Build Generative AI Training
-      - name: Install dependencies (gen-ai)
-        working-directory: ./生成AI研修
-        run: npm install
+#      # Build Generative AI Training
+#      - name: Install dependencies (gen-ai)
+#        working-directory: ./生成AI研修
+#        run: npm install
 
-      - name: Build (gen-ai)
-        working-directory: ./生成AI研修
-        run: npx slidev build --base /study-docs/gen-ai/ --out dist
+#      - name: Build (gen-ai)
+#        working-directory: ./生成AI研修
+#        run: npx slidev build --base /study-docs/gen-ai/ --out dist
 
       # Prepare for Deployment
       - name: Create artifact directory
         run: |
           mkdir public
           mkdir public/hands-on
-          mkdir public/gen-ai
+#          mkdir public/gen-ai
           cp -r hands-on/dist/* public/hands-on/
-          cp -r 生成AI研修/dist/* public/gen-ai/
+#          cp -r 生成AI研修/dist/* public/gen-ai/
           # Create a redirect to hands-on
           echo '<meta http-equiv="refresh" content="0; url=./hands-on/">' > public/index.html
 
