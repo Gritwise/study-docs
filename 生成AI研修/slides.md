@@ -1,0 +1,1102 @@
+---
+theme: seriph
+background: ./bg-gritwise.png
+class: "text-center text-slate-700"
+highlighter: shiki
+lineNumbers: false
+info: |
+  ## 生成AI研修用スライド (50分版)
+  Slidevで作成されたプレゼンテーション
+drawings:
+  persist: false
+defaults:
+  background: ./bg-gritwise.png
+transition: slide-left
+title: 生成AI研修
+---
+
+<style>
+.slidev-layout {
+  background-image: url("./bg-gritwise.png") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #334155; /* slate-700 */
+}
+</style>
+
+# 生成AI研修
+
+## AI時代のコンサルタント生存戦略と実践
+
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-gray-200">
+    Start <carbon:arrow-right class="inline"/>
+  </span>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# アジェンダ
+ 
+<div class="grid grid-cols-2 gap-4 text-left text-xs">
+ 
+<div>
+ 
+- **1. イントロダクション**
+  - 研修の目的・ゴール
+  - マインドセットの変革
+- **2. なぜ今、AIを学ぶのか**
+  - AIでできること・できないこと
+  - コンサル業界の現状
+  - 生成AIの基本メカニズム
+- **3. コンサル業務での活用事例**
+  - 市場調査・構造化・システム開発への応用
+ 
+</div>
+<div>
+ 
+- **4. AIごとの得意不得意**
+  - 確率モデル（AI）とロジック（従来システム）の決定的な違い
+  - システム・機能の「できる・できない」を見極める
+- **5. 情報漏洩 / セキュリティ観点**
+  - ハルシネーション対策
+  - 社内ガイドライン
+- **6. まとめ**
+  - 今日からのアクション
+  - Future Outlook
+ 
+</div>
+ 
+</div>
+ 
+---
+background: ./bg-gritwise.png
+---
+
+# 1. イントロダクション：研修のゴール
+
+**AIの特性と限界を正しく理解し、責任ある「伴走パートナー」としての活用を目指す**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-left text-xs">
+  <div class="bg-white/90 p-3 rounded border border-slate-300">
+    <strong class="text-sky-700">1. 業務効率化と限界の把握</strong>
+    <ul class="list-disc pl-4 mt-1 text-slate-600">
+      <li>AIで「なにができ、なにができないのか」を明確に理解する</li>
+      <li>何でもやらせるのではなく、AIが得意な領域にタスクを切りだす</li>
+    </ul>
+  </div>
+  <div class="bg-white/90 p-3 rounded border border-slate-300">
+    <strong class="text-sky-700">2. 成果物への責任</strong>
+    <ul class="list-disc pl-4 mt-1 text-slate-600">
+      <li>AIを利用しつつも、最終的な成果物の責任は自分自身にある</li>
+      <li>「AIが言ったから」は言い訳にはならない</li>
+    </ul>
+  </div>
+  <div class="bg-white/90 p-3 rounded border border-slate-300">
+    <strong class="text-sky-700">3. システム実装のイメージ醸成</strong>
+    <ul class="list-disc pl-4 mt-1 text-slate-600">
+      <li>システム開発におけるAI関連機能の実現可能性を具体的にイメージする</li>
+      <li>AIを「魔法」ではなく、「部品」として捉える</li>
+    </ul>
+  </div>
+  <div class="bg-white/90 p-3 rounded border border-slate-300">
+    <strong class="text-sky-700">4. 技術的背景の理解</strong>
+    <ul class="list-disc pl-4 mt-1 text-slate-600">
+      <li>AI（確率モデル）と従来のロジック（アルゴリズム）の構造的違いを理解</li>
+      <li>バグと確率的なゆらぎ（ゆれ）への対処法の違いを知る</li>
+    </ul>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 1. イントロダクション：マインドセットの変革
+
+**作業者から「プロデューサー」へ ～AIに指示を出し、価値を統合する役割への転換～**
+
+<h3 class="text-sm font-bold mb-2">これからの時代に求められる役割の変化</h3>
+
+<div class="text-[10px]">
+
+| **姿勢** | **As-Is：作業屋（Executor）** | **To-Be：プロデューサー（Producer）** |
+| :--- | :--- | :--- |
+| **主な役割** | 自ら手を動かし、時間をかけて作る | AIという複数の部下に指示を出し、価値を統合する |
+| **バリューの源泉** | 作業の速さ、正確さ、忍耐力 | 問いの質、設計力、編集・統合力 |
+| **AIとの向き合い方** | 自分の仕事を奪う「脅威」 | 自分の能力を10倍にする「パートナー」 |
+| **品質管理** | セルフチェック（自分のミスを防ぐ） | 検品・批評（AIのミスを見抜き、磨き上げる） |
+
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 1. イントロダクション：マインドセットの変革
+
+**作業者から「プロデューサー」へ ～AIに指示を出し、価値を統合する役割への転換～**
+
+<h3 class="text-sm font-bold mb-4">プロデューサーに必要な「3つのスキル」</h3>
+
+<div class="grid grid-cols-3 gap-2 text-left text-[10px]">
+  <div class="bg-sky-50/90 p-3 rounded border border-sky-200">
+    <strong class="text-sky-700">1. 「問い」を立てる力</strong><br>
+    <p class="mt-1 text-slate-600">何が課題で、AIに何を解決させるべきか。白紙の状態から「設計図」を描く能力。</p>
+  </div>
+  <div class="bg-white/90 p-3 rounded border border-slate-300">
+    <strong class="text-slate-500">2. 「真偽」を見極める力</strong><br>
+    <p class="mt-1 text-slate-600">AIの回答を鵜呑みにせず、根拠を確認し、自社の文脈に合うか判断する「審美眼」。</p>
+  </div>
+  <div class="bg-sky-50/90 p-3 rounded border border-sky-200">
+    <strong class="text-sky-700">3. 「つなぎ合わせる」力</strong><br>
+    <p class="mt-1 text-slate-600">AIが作った断片的なパーツを組み合わせ、一つの完成した価値（資料、システム等）に仕上げる力。</p>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 1. イントロダクション：マインドセットの変革
+
+**作業者から「プロデューサー」へ ～AIに指示を出し、価値を統合する役割への転換～**
+
+<h3 class="text-sm font-bold mb-4">マインドセットを支える「3つの心得」</h3>
+
+<div class="grid grid-cols-1 gap-2 text-left text-xs">
+  <div class="p-2 border-l-4 border-sky-200 bg-sky-50/90">
+    <strong class="text-sky-700">1. 仮説を持ってからAIに当たる</strong><br>
+    <span class="text-slate-600">
+      「無策で聞く」を排し、自らの仮説を検証・拡張する。
+      <br>
+      まず自力で3分考え、論理構成や仮説の「型」を作ってからAIをぶつける。自分の脳を「メインプロセッサ」、AIを「コプロセッサ（拡張演算装置）」と定義する。
+      <br>
+      初手でAIに丸投げするとAIの解答にアンカリングされてしまい思考が浅くなる。
+    </span>
+  </div>
+  <div class="p-2 border-l-4 border-teal-200 bg-teal-50/90">
+    <strong class="text-teal-700">2. ゼロベース思考から「高速反復」へ</strong><br>
+    <span class="text-slate-600">
+      「100点の完成品」を目指す前に、30点のプロトタイプを秒速で回す。
+      <br>
+      AIに粗いたたき台を提示させ、人間がクリティカル・シンキングで磨き上げる。試行回数を圧倒的に増やすことで、最終的なアウトプットの解像度を高める。
+    </span>
+  </div>
+  <div class="p-2 border-l-4 border-rose-200 bg-rose-50/90">
+    <strong class="text-rose-700">3. プロフェッショナルとしての「最終責任」</strong><br>
+    <span class="text-slate-600">
+      思考のプロセスは共有しても、責任はアウトソーシングしない。
+      <br>
+      アウトプットの論理的妥当性、ファクトの正確性、そしてクライアントへの提供価値のすべてに、自身が署名（サイン）する覚悟を持つ。
+    </span>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 1. イントロダクション：マインドセットの変革
+
+**作業者から「プロデューサー」へ ～AIに指示を出し、価値を統合する役割への転換～**
+
+<div class="mt-12 text-center p-6 bg-white/90 rounded-lg border border-slate-300">
+  <h3 class="text-sky-700 text-xl font-bold italic underline mb-4">Key Message</h3>
+  <p class="text-lg text-slate-800 font-bold italic mb-6">
+    "AIは「魔法の杖」ではなく「優秀だが嘘もつく新人アシスタント」である。"
+  </p>
+  <p class="text-sm text-slate-500 leading-relaxed text-left max-w-2xl mx-auto">
+    優秀な上司が、部下の得意・不得意を見極めて適切に采配するように、<br>
+    AIを「管理・監督」し、最終的な <strong class="text-sky-700">価値（Value）</strong> に責任を持つ立場へとシフトが求められる。
+  </p>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 2. なぜ今、AIを学ぶのか
+
+## コンサル業界の生存戦略：大手ファームのリアル
+
+**AI活用はもはや「先進的な取り組み」ではなく「当たり前の業務インフラ」になりつつある**
+
+<div class="grid grid-cols-2 gap-4 text-left mt-4 text-xs">
+
+<div>
+  <h3 class="text-sky-700 font-bold mb-2">大手ファームの現在地</h3>
+  <ul class="list-disc pl-4 space-y-2 text-slate-600">
+    <li><strong>McKinsey「Lilli」</strong>: 10万以上の社内文書を統合したAIチャットボット。社員4.5万人の<strong>70%以上</strong>が週約17回利用し、作業時間を<strong>約30%削減</strong></li>
+    <li><strong>BCG「Deckster」</strong>: PowerPointのスライド作成作業を効率化するAIツール</li>
+    <li><strong>Deloitte</strong>: グループ2万人中<strong>1万人以上</strong>が生成AIをアクティブに活用</li>
+  </ul>
+</div>
+
+<div>
+  <h3 class="text-rose-700 font-bold mb-2">日本の危機的状況（BCG調査 2025）</h3>
+  <ul class="list-disc pl-4 space-y-2 text-slate-600">
+    <li>生成AIの日常利用率：<strong>世界72% vs 日本51%</strong></li>
+    <li>「十分なトレーニングを受けた」と感じる割合：<strong>世界36% vs 日本12%</strong></li>
+    <li>54%が「未許可でもAIツールを使う」→ シャドーAIリスク</li>
+  </ul>
+</div>
+
+</div>
+
+<div class="mt-4 text-center bg-rose-100/90 p-5 rounded-lg border-2 border-rose-400">
+  <div class="text-lg font-bold text-rose-800 mb-2">結論：AI活用は「前提条件」である</div>
+  <div class="text-sm text-slate-700">
+    「AIを使う者」と「使えない者」の間で、個人の生産性に圧倒的な差が生まれている。<br>
+    AIを活用できることは、もはや差別化要因ではない。コンサルタントとしての<strong class="text-rose-800">前提条件</strong>である。
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 2. なぜ今、AIを学ぶのか
+
+## コンサルタントの「仕事のOS」が変わる
+
+**従来スキルが不要になるのではない。スキルの「使い方」がアップデートされる**
+
+<div class="mt-4 text-xs text-left">
+
+| 業務 | Before AI（従来） | With AI（これから） |
+|:---|:---|:---|
+| **リサーチ** | 自分で検索・読み込み・整理 | まず自分で仮説・論点を設計し、AIで初期調査を補完。結果を自分の目で **解釈・検証** する |
+| **資料作成** | 白紙からPPT作成（1日がかり） | まず自分でストーリーラインを考え、AIにドラフトを出させて **叩き台** にする。最終判断は自分 |
+| **集計・統計処理** | Excelで手作業集計 | まず自分で分析の切り口を設計し、AIにデータ処理を任せる。 **「So What?」は自分で考える** |
+| **レビュー** | 上司待ちの1回レビュー | まず自分でチェックし、AIで **別視点のセルフレビュー** を追加。上司レビューの精度が向上 |
+
+</div>
+
+<div class="mt-4 text-sm text-center bg-sky-50/90 p-3 rounded border border-sky-200">
+  <strong>Key Message:</strong> AIは思考の<strong>サポート役</strong>であり、自身の能力を<strong>拡張するパートナー</strong>。<br>
+  コンサルタントの価値は「手を動かす量」に加え、<strong>「頭を使う質」</strong>で決まる時代となる。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 2. なぜ今、AIを学ぶのか
+
+## コンサルタントの実践アクション集
+
+**明日から始められる、AI時代の「筋トレ」メニュー**
+
+<div class="grid grid-cols-3 gap-3 mt-4 text-left text-xs">
+
+<div class="bg-sky-50/90 p-3 rounded border border-sky-200">
+  <div class="text-sky-700 font-bold mb-2">① テクノロジーリテラシー</div>
+  <ul class="list-disc pl-4 space-y-1 text-slate-600">
+    <li>🔰 毎日1タスク、AIに振ってみる（メール文案、要約、翻訳等）</li>
+    <li>📝 プロンプトを「役割・タスク・制約」で構造化する癖をつける</li>
+    <li>📚 週1回、AI関連ニュースを1本読む</li>
+  </ul>
+</div>
+
+<div class="bg-teal-50/90 p-3 rounded border border-teal-200">
+  <div class="text-teal-700 font-bold mb-2">② ヒューマンスキル</div>
+  <ul class="list-disc pl-4 space-y-1 text-slate-600">
+    <li>👂 議事録をAIに書かせ、「書かれなかった空気感」を自分でメモする</li>
+    <li>🤝 クライアントの「本当に困っていること」を言い換えて確認する</li>
+    <li>🧩 AIが出せない「現場の肌感覚」を意識して集める</li>
+  </ul>
+</div>
+
+<div class="bg-purple-50/90 p-3 rounded border border-purple-200">
+  <div class="text-purple-700 font-bold mb-2">③ 統合思考力</div>
+  <ul class="list-disc pl-4 space-y-1 text-slate-600">
+    <li>❓ AIの出力に必ず「だから何？」を3回問う習慣をつける</li>
+    <li>🎯 AIのドラフトを受け取ったら「クライアントにとっての意味」を1文で書く</li>
+    <li>⚖️ AIの提案に対して「反論」をセットで考える</li>
+  </ul>
+</div>
+
+</div>
+
+<div class="mt-3 text-center text-sm font-bold text-slate-700">
+  💡 最初は「AIに振る → 結果を見る → 自分で直す」の繰り返し。この反復が最速の学習法。<br>
+  <span class="text-sky-700">まずはとにかく自分で触って、いろいろと試してみることが何より重要。</span>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 2. なぜ今、AIを学ぶのか
+
+## 業界が示すフレームワーク：人材こそがAI成功の鍵（参考）
+
+**AIの成否は技術ではなく「人」で決まる。だからこそコンサルタントの価値が高まる**
+
+<div class="grid grid-cols-2 gap-6 text-left mt-4 text-xs">
+
+<div class="bg-purple-50/90 p-4 rounded border border-purple-200">
+  <h3 class="text-purple-700 font-bold text-sm mb-2">Deloitte「パープルピープル」</h3>
+  <div class="mb-2 text-slate-600">ビジネス（赤）× テクノロジー（青）＝ パープル（紫）の橋渡し人材</div>
+  <div class="grid grid-cols-2 gap-2 mt-2">
+    <div class="bg-rose-50/90 p-2 rounded border border-rose-200">
+      <div class="font-bold text-rose-700">ビジネス側</div>
+      <ul class="list-disc pl-3 mt-1 text-slate-600">
+        <li>戦略立案</li>
+        <li>インサイト創出</li>
+        <li>顧客体験デザイン</li>
+        <li>プロジェクトマネジメント</li>
+      </ul>
+    </div>
+    <div class="bg-sky-50/90 p-2 rounded border border-sky-200">
+      <div class="font-bold text-sky-700">テクノロジー側</div>
+      <ul class="list-disc pl-3 mt-1 text-slate-600">
+        <li>AIエンジニアリング</li>
+        <li>アーキテクチャー構想</li>
+        <li>セキュリティ</li>
+        <li>プロンプトエンジニアリング</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-3 bg-amber-50/90 p-2 rounded border border-amber-200 text-slate-700">
+    <strong class="text-amber-700">💡 ポイント：</strong>AI時代に最も価値が高いのは「どちらか片方」の専門家ではなく、<strong>両方の言語を理解して橋渡しできる人材</strong>。コンサルタントはこの「パープル人材」を目指せるポジションにいる。
+  </div>
+</div>
+
+<div class="bg-sky-50/90 p-4 rounded border border-sky-200">
+  <h3 class="text-sky-700 font-bold text-sm mb-2">BCG「10-20-70」アプローチ</h3>
+  <div class="mb-2 text-slate-600">AIトランスフォーメーション成功の配分</div>
+  <div class="space-y-2 mt-3 text-slate-600">
+    <div class="flex items-center gap-2">
+      <div class="bg-slate-500 rounded-full px-3 py-1 font-bold w-16 text-center text-white">10%</div>
+      <div>アルゴリズム（AI技術そのもの）</div>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="bg-sky-600 rounded-full px-3 py-1 font-bold w-16 text-center text-white">20%</div>
+      <div>テクノロジーとデータ基盤</div>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="bg-amber-600 rounded-full px-3 py-1 font-bold w-16 text-center text-white">70%</div>
+      <div><strong>人材とプロセス</strong></div>
+    </div>
+  </div>
+  <div class="mt-3 bg-amber-50/90 p-2 rounded border border-amber-200 text-slate-700">
+    <strong class="text-amber-700">💡 ポイント：</strong>AIプロジェクトの成否を決めるのはアルゴリズムの精度でもシステム基盤でもなく、<strong>それを使いこなす人材と業務プロセスの再設計（70%）</strong>。「人」を動かせるコンサルタントこそがAI変革を成功に導く。
+  </div>
+</div>
+
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 2. なぜ今、AIを学ぶのか
+
+## 生成AIの基本メカニズム
+
+**AIは「物知り博士」ではなく、文脈に沿って「もっともらしい言葉」をつなげる予測エンジン**
+
+<div class="text-left mt-4 text-xs">
+  <div class="mb-3">
+    <strong class="text-sm">大規模言語モデル（LLM）の仕組み</strong><br>
+    <span class="text-slate-600">AIは「答えを知っている」わけではありません。膨大な文章を学習し、「この言葉の次に来る確率が高い言葉は何か？」を予測してつなげているだけです。</span>
+  </div>
+
+  <div class="bg-sky-50/90 p-2 rounded border border-sky-200 mb-4 text-slate-600">
+    <strong>💡 たとえば：</strong>「日本の首都は＿＿」と入力すると、学習データから「東京」が最も高確率だと判断して出力します。「知っている」のではなく「統計的に当てている」のです。
+  </div>
+  <div class="mt-2 text-[10px] text-rose-600">
+    ※LLMの「確率的に言葉をつなぐ」性質上、構造的に避けられない事象です。
+  </div>
+  <div class="flex items-start gap-4">
+    <div class="flex-1">
+      <strong class="text-sm">なぜ「もっともらしい嘘」が生まれるのか？</strong><br>
+      <span class="text-slate-600">確率的に自然な言葉をつなげるため、文章は極めて流暢です。しかし「流暢 ≠ 正確」です。</span>
+      <div class="bg-amber-50/90 p-2 rounded border border-amber-200 mt-2 text-slate-600">
+        <strong>💡 身近な例：</strong>スマホの予測変換を想像してください。「お疲れ＿」の次に「様です」と出るのは、多くの人がそう打つから。でも文脈によっては「様でした」が正しい場合もある。<br>
+        LLMはこの予測変換の超高度版。もっともらしいけれど、事実かどうかは保証されない——これがハルシネーションの正体です。
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 2. なぜ今、AIを学ぶのか
+
+## AIでできること・できないこと
+
+**AIは「言葉を扱う仕事」がとても得意。一方で「正確さが命」の仕事には注意が必要**
+
+<div class="grid grid-cols-2 gap-4 text-left mt-4 text-xs">
+
+<div>
+  <h3 class="font-bold border-b border-teal-300 mb-2 text-teal-700">✅ 得意 → 積極的に活用しよう</h3>
+  <ul class="list-disc pl-4 space-y-2 text-slate-600">
+    <li><strong>要約・サマリー作成</strong>: 議事録やレポートから要点抽出<br><span class="text-slate-400 text-[10px]">例：30ページの調査レポートを3分でA4一枚に要約</span></li>
+    <li><strong>翻訳・言語変換</strong>: 多言語やコード翻訳<br><span class="text-slate-400 text-[10px]">例：英語の契約書ドラフトを日本語に翻訳して概要を把握</span></li>
+    <li><strong>アイデア出し・壁打ち</strong>: 観点の洗い出し<br><span class="text-slate-400 text-[10px]">例：「この提案の弱点を5つ挙げて」とレビュー相手にする</span></li>
+    <li><strong>下書き・構成案作成</strong>: メール、提案書、コードのドラフト<br><span class="text-slate-400 text-[10px]">例：お断りメールの丁寧な文案を3パターン作成</span></li>
+  </ul>
+</div>
+
+<div>
+  <h3 class="font-bold border-b border-amber-300 mb-2 text-amber-700">⚠️ 不得意 → 人間が必ずチェック・判断</h3>
+  <ul class="list-disc pl-4 space-y-2 text-slate-600">
+    <li><strong>正確な計算</strong>: 確率生成のため四則演算も間違える<br><span class="text-slate-400 text-[10px]">例：「120×0.85」を聞いても誤答する場合がある。計算はExcelで</span></li>
+    <li><strong>事実確認 (Fact Check)</strong>: 裏取りが必須<br><span class="text-slate-400 text-[10px]">例：実在しない論文やURLをもっともらしく捏造することがある</span></li>
+    <li><strong>最新情報の参照</strong>: 学習データ外の情報は知らない<br><span class="text-slate-400 text-[10px]">例：昨日発表されたニュースには正確に答えられない（※検索機能付きを除く）</span></li>
+    <li><strong>機密情報の保持</strong>: 学習利用リスク（環境による）<br><span class="text-slate-400 text-[10px]">例：入力した顧客情報がAIの学習に使われる可能性がある</span></li>
+  </ul>
+</div>
+
+</div>
+
+<div class="mt-3 text-center bg-sky-50/90 p-2 rounded border border-sky-200 text-sm text-slate-700">
+  <strong>使い方のコツ：</strong>得意分野では「時短の武器」として積極活用。不得意分野では「必ず自分の目で検証」を徹底。<br>AIの出力を鵜呑みにせず、最終判断は常に自分が行う。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用①: 市場調査・情報収集
+
+**RAG（検索拡張生成）を活用し、ハルシネーションを抑制しながら効率的に調査を行う**
+
+<div class="grid grid-cols-2 gap-4 mt-2 text-[10px] text-left">
+  <div class="bg-blue-50/90 p-3 rounded border border-blue-200">
+    <h3 class="font-bold text-blue-700 mb-1">🔍 NotebookLM の活用</h3>
+    <ul class="list-disc pl-4 space-y-1 text-slate-600">
+      <li><strong>ソース限定回答</strong>: アップロードした資料のみに基づいて回答させ、ハルシネーションを極小化。</li>
+      <li><strong>ソース引用</strong>: 回答の根拠となる箇所を原文から即座に参照可能。</li>
+      <li><strong>多様なアウトプット</strong>: FAQ作成、要約、対話形式の概要生成。</li>
+    </ul>
+  </div>
+  <div class="bg-gray-50/90 p-3 rounded border border-gray-200">
+    <strong>実践プロンプト例:</strong><br>
+    <p class="mt-1 text-slate-600">
+      「以下の[参考情報]に基づいて、自動車業界におけるEVシフトの現状と課題を3つの観点で要約してください。情報がない場合は『不明』と答えてください。」
+    </p>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用②: 提案資料の構成案作成・構造化
+
+**「役割・タスク・制約」を明確に指示し、非構造化データを構造化データへ変換する**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-left text-xs">
+  <div>
+    <strong>Prompt Input</strong>
+    <ul class="list-disc pl-4">
+      <li><strong>役割</strong>: ベテランのシステムコンサルタント</li>
+      <li><strong>タスク</strong>: 速記メモから提案書の目次構成案作成</li>
+      <li><strong>制約</strong>: MECEであること。表形式（課題・解決策・インパクト）。</li>
+    </ul>
+  </div>
+  <div>
+    <strong>Output (Table)</strong><br>
+    課題、解決策、インパクトが整理された表が出力される。<br>
+    <br>
+    <strong>プロンプトエンジニアリングの基本型</strong>
+    <ul class="list-disc pl-4">
+      <li><strong>明確に</strong>: 役割を与える</li>
+      <li><strong>文脈示して</strong>: 背景や目的</li>
+      <li><strong>形式を指定する</strong>: 表形式など</li>
+    </ul>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用③: システム開発におけるAI活用
+
+**上流工程の要件定義から下流のテストまで、開発サイクルの各所でAIが支援する**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-left text-xs">
+  <div>
+    <ul class="list-disc pl-4 space-y-1">
+      <li><strong>要件定義</strong>: 網羅性チェック / ユースケース作成 / 長大なドキュメント作成</li>
+      <li><strong>基本設計</strong>: インターフェース案作成</li>
+      <li><strong>詳細設計</strong>: ロジックの言語化 / ソースコードからリバース生成</li>
+    </ul>
+  </div>
+  <div>
+    <ul class="list-disc pl-4 space-y-1">
+      <li><strong>実装</strong>: Claude / Copilot等によるコード補完</li>
+      <li><strong>単体テスト</strong>: テストコード / データ自動生成</li>
+      <li><strong>結合テスト</strong>: テストシナリオ作成</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-4 text-xs text-rose-700 text-left border border-rose-200 p-2 rounded">
+  <strong>Caution</strong>: 生成されたコードには脆弱性やバグが含まれる可能性があるため、必ず人間が動作検証とセキュリティスキャンを行うこと。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用④: 品質担保・レビュー
+
+**「書かせる」だけでなく「読ませる」ことで、レビュワーとしての価値を引き出す**
+
+<div class="grid grid-cols-3 gap-2 mt-4 text-left text-xs">
+  <div class="bg-sky-50/90 p-2 rounded border border-sky-200">
+    <strong class="text-sky-700">論理整合性チェック</strong><br>
+    <span class="text-slate-600">提案書のドラフトを読み込ませ、「論理の飛躍」や「矛盾点」を指摘させる。</span>
+  </div>
+  <div class="bg-white/90 p-2 rounded border border-slate-300">
+    <strong class="text-slate-500">ガイドラインチェック</strong><br>
+    <span class="text-slate-600">社内用語規定や表記ルール（トンマナ）を与え、逸脱箇所をリストアップさせる。</span>
+  </div>
+  <div class="bg-rose-50/90 p-2 rounded border border-rose-200">
+    <strong class="text-rose-700">仮想上司</strong><br>
+    <span class="text-slate-600">「辛口の上司」という役割を与え、提案書の弱点や想定される反論を生成させる。</span>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用⑤: 最先端ツールによる開発・デザインの自動化
+
+**AntigravityやGitHub Copilot, ClaudeCode等により、構想から実装までを極限まで短縮する**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-xs text-left">
+  <div>
+    <h3 class="font-bold border-b border-sky-200 mb-1 text-sky-700">🚀 爆速開発ユーティリティ</h3>
+    <ul class="list-disc pl-4 space-y-1 text-slate-600">
+      <li><strong>Antigravity</strong>: 要件定義書の自動生成からポータルサイト構築、アプリ開発までを一気通貫で支援。</li>
+      <li><strong>Cursor / Obsidian</strong>: AI連携テキストエディタによる「思考の同期」とメモ作成の効率化。</li>
+    </ul>
+  </div>
+  <div>
+    <h3 class="font-bold border-b border-slate-300 mb-1 text-slate-500">🎨 デザイン to コード</h3>
+    <ul class="list-disc pl-4 space-y-1 text-slate-600">
+      <li><strong>Figma MCP</strong>: Figma上のデザインから即座にフロントエンドコードを生成。</li>
+      <li><strong>Pencil</strong>: 次世代デザインツールの活用。</li>
+    </ul>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用⑥: Markdownによる資料作成の変革
+
+**AIは「構造化されたテキスト」に強い。スライド作成もMarkdownへの転換が鍵となる。**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-[10px] text-left">
+  <div>
+    <h3 class="font-bold border-b border-teal-200 mb-1 text-teal-700">📌 社内資料・思考整理の最適解</h3>
+    <ul class="list-disc pl-4 space-y-1 text-slate-600">
+      <li><strong>現状の立ち位置</strong>: 顧客提示用スライドの全自動生成は難易度が高いが、社内報告やロジック整理には最適。</li>
+      <li><strong>パワポ不要の実例</strong>: <a href="https://qiita.com/piyonakajima/items/1084e2f2ba765e855271" target="_blank">Qiitaの記事</a> のような見栄えの良い資料も爆速で作成可能。</li>
+    </ul>
+  </div>
+  <div>
+    <h3 class="font-bold border-b border-amber-200 mb-1 text-amber-700">🧜 Mermaidによる図解の自動化</h3>
+    <ul class="list-disc pl-4 space-y-1 text-slate-600">
+      <li><strong>Mermaidとは</strong>: マークダウン形式でシーケンス図やフローチャートを描けるツール。</li>
+      <li><strong>AIとの相性</strong>: 生成AIは「構造化された文字列」の生成が極めて得意。AIが生成したテキストをそのままMermaidで図解化することで、可読性の高い図が一発で完成する。</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-4 flex items-start gap-2 text-[10px] text-left bg-slate-50 p-2 rounded border border-slate-200">
+  <div class="font-bold text-slate-700 whitespace-nowrap">🤔 NotebookLM (スライド生成機能) の現在地:</div>
+  <div class="text-slate-600">
+    デザイン性は非常に高いものが一発で生成されるが、微調整が難しく（再生成で内容が変わる）、PDFベースのため編集も困難。<br>
+    用途（「とりあえず形にする」vs「緻密に作り込む」）による使い分けが必要。
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用⑦: AIに「読ませる」ためのドキュメント術
+
+**AIを使いこなすなら、AIが最も理解しやすい「テキスト文化」への適応が必要不可欠。**
+
+<div class="bg-white/90 p-4 rounded border border-slate-300 text-xs text-left">
+  <h3 class="font-bold text-sky-700 mb-2">💡 AIフレンドリーな形式選び</h3>
+  <ul class="list-disc pl-5 space-y-2 text-slate-600">
+    <li><strong>画像よりテキスト (Markdown/XML)</strong>: AIの本領を発揮させるには素のテキストが有利。</li>
+    <li><strong>draw.io (XML保存) の活用</strong>: XML形式ならAIが正確に図を読み取れる。</li>
+    <li><strong>Markdown必須論</strong>: AIを使い倒すなら、Markdownは共通言語として必須。</li>
+  </ul>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 3. コンサル業務での活用事例
+
+## 活用⑧: AIエディタとExcel連携による生産性向上
+
+**AIエディタによる実務自動化と、ナレッジの「第二の脳」化。**
+
+<div class="mt-4 text-xs text-left">
+  <strong>日々のメモをAIと共に構造化・蓄積し、単純作業はExcel上でAIに一任する。</strong>
+</div>
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-xs text-left">
+  <div>
+    <h3 class="font-bold border-b border-blue-200 mb-1">🛠 推奨ツール群</h3>
+    <ul class="list-disc pl-4 space-y-1">
+      <li><strong>Claude in Excel</strong>: WBSやガントチャートをチャット感覚で爆速作成。</li>
+      <li><strong>Antigravity / Cursor</strong>: 開発・執筆の文脈を理解するAIエディタ。</li>
+      <li><strong>Obsidian (Copilot連携)</strong>: ローカルのノート同士をAIが関連付け。</li>
+    </ul>
+  </div>
+  <div>
+    <h3 class="font-bold border-b border-purple-200 mb-1">🧠 メリット：いわゆる「第二の脳」</h3>
+    <ul class="list-disc pl-4 space-y-1">
+      <li><strong>構造化の自動化</strong>: 非構造なメモをAIが整理・要約。</li>
+      <li><strong>エージェントによる検索</strong>: 過去の膨大なメモから、質問一つで必要な知見にアクセス。</li>
+      <li><strong>有能な秘書</strong>: 文脈に基づいた関連情報の提案。</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-4 text-center border border-purple-200/50 p-2 text-xs">
+  単なる「記録」から、AIが共に考え、引き出してくれる<strong>「パーソナルな知能基盤」</strong>へと進化する。
+</div>
+
+---
+
+## 活用⑨: Claude in Excelによる爆速WBS作成
+
+**面倒なExcel作業から解放され、コンサルタントは「思考」と「課題解決」に集中する**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-xs text-left">
+  <div>
+    <h3 class="font-bold border-b border-green-200 mb-2 text-green-700">⚡️ 圧倒的な作業自動化</h3>
+    <ul class="list-disc pl-4 space-y-2 text-slate-600">
+      <li><strong>フォーマット自動生成</strong>: 「階層・担当・期限・ステータスのカラムを作って」と指示するだけで表が完成。</li>
+      <li><strong>書式設定の自動化</strong>: 「完了はグレー、遅延は赤」などの条件付き書式も一瞬でセット。</li>
+      <li><strong>タスク分解 (Breakdown)</strong>: 「要件定義フェーズのタスクを洗い出して」と指示すれば、WBSの行を自動で埋めてくれる。</li>
+    </ul>
+  </div>
+  <div>
+    <h3 class="font-bold border-b border-blue-200 mb-2 text-blue-700">🚀 コンサル業務の質的転換</h3>
+    <ul class="list-disc pl-4 space-y-2 text-slate-600">
+      <li><strong>脱・Excel職人</strong>: "ちみちみ"としたセル結合や色付け作業は不要。</li>
+      <li><strong>本質への回帰</strong>: 空いた時間で仮説設計や課題解決など、人間にしかできない業務に注力。</li>
+      <li><strong>「筋トレ」の消滅</strong>: 従来、新人がExcel操作で鍛えられていた領域はAIが代替。「思考の筋トレ」へのシフトが急務。</li>
+    </ul>
+  </div>
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 4. AIごとの得意不得意
+
+## 確率モデル vs ロジック
+
+**コンサルタントとして、ソリューションの「確実性」と「柔軟性」のバランスを考慮するために、<br>「確率的」なAIと「確定的」なロジックの使い分けが重要**
+
+<div class="mt-6 text-[10px]">
+
+| **AI/ロジック** | **生成AI** | **従来のITシステム（ロジック）** |
+| :--- | :--- | :--- |
+| **仕組み** | 次に来る「もっともらしい単語」を予測してつなげる | ルール（アルゴリズム）通りに100%正確に処理する |
+| **出力の一貫性** | 毎回異なる出力になる可能性がある | 同じ入力なら、必ず同じ出力になる |
+| **デリバリーの勘所** | PoCによる検証が必須 <br> 100%は保証せず、「業務効率化」を狙う | 要件定義による仕様確定が必須 <br> 100%の動作を保証し、「自動化」を狙う |
+| **用途** | 文章作成、要約、翻訳、曖昧な指示の解釈 | 正確な計算、在庫管理、決済処理、判定 |
+
+</div>
+
+<div class="mt-4 text-center text-xs font-bold text-amber-700 border border-amber-200 bg-white/90 p-2 rounded">
+  Recommendation: 全てをAIで解決しようとせず、「入力（非構造化データの構造化）」はAIに任せ、「処理（構造化データの計算・登録）」はロジックで固めるという、ハイブリッド構成が推奨。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 4. AIごとの得意不得意
+
+## システム・機能の「できる・できない」を見極める
+
+**コンサルタントとして、ソリューションの「確実性」と「柔軟性」のバランスを考慮するために、<br>「確率的」なAIと「確定的」なロジックの使い分けが重要**
+
+<div class="mt-4 text-left text-xs space-y-3">
+
+<div class="p-2 border-l-4 border-slate-300 bg-white/90">
+  <h3 class="font-bold text-slate-700">🔹 「定型・正確性」の領域（ロジックに任せる）</h3>
+  <ul class="list-disc pl-5 mt-1 text-slate-600">
+    <li><strong>例</strong>: 経費精算の計算、契約書の期限管理、売上データの集計。</li>
+    <li><strong>判断</strong>: 1円のズレも許されない、ルールが明確なものは従来のExcel関数や社内システムが正解。</li>
+  </ul>
+</div>
+
+<div class="p-2 border-l-4 border-sky-300 bg-sky-50/90">
+  <h3 class="font-bold text-sky-700">🔸 「非定型・創造性」の領域（AIに任せる）</h3>
+  <ul class="list-disc pl-5 mt-1 text-slate-600">
+    <li><strong>例</strong>: 提案書の骨子作成、膨大な議事録の要約、クライアント向けメールのトーン変更、リサーチの切り口出し。</li>
+    <li><strong>判断</strong>: 唯一の正解がなく、文脈の理解や表現の柔軟性が求められるものはAIの独壇場。</li>
+  </ul>
+</div>
+
+<div class="p-2 border-l-4 border-teal-300 bg-teal-50/90">
+  <h3 class="font-bold text-teal-700">✨ 「ハイブリッド」の領域（人間が統合する）</h3>
+  <ul class="list-disc pl-5 mt-1 text-slate-600">
+    <li><strong>例</strong>: AIに市場トレンドを要約させ、その数値をExcelで分析し、最終的な提言を人間が書く。</li>
+    <li><strong>判断</strong>: 自身のタスクに「100%の正解」が必要か、それとも「たたき台」で十分か。後者の場合は、AIを積極的に活用するべき。</li>
+  </ul>
+</div>
+
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 5. 情報漏洩 / セキュリティ観点
+
+## AI利活用の3つのリスクと対策
+
+**不適切な利用は情報漏洩や法的リスクにつながる。「知らなかった」は通用しない**
+
+<div class="grid grid-cols-3 gap-3 mt-6 text-left text-xs">
+
+<div class="bg-rose-50/90 p-4 rounded border-t-4 border-rose-400">
+  <div class="font-bold text-sm mb-2 text-rose-700">📊 ハルシネーション対策</div>
+  <div class="mb-2 text-slate-600">AIの回答は「もっともらしい嘘」を含む前提で使う。</div>
+  <div class="bg-white/90 p-2 rounded border border-rose-100">
+    <strong class="text-rose-700">やるべきこと：</strong>
+    <ul class="list-disc pl-3 mt-1 text-slate-600">
+      <li>数値・固有名詞は必ず一次情報で裏取り</li>
+      <li>「出典は？」とAIに聞く癖をつける</li>
+      <li>自分が知識のある領域で使う（未知領域は高リスク）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="bg-rose-50/90 p-4 rounded border-t-4 border-amber-400">
+  <div class="font-bold text-sm mb-2 text-amber-700">🔒 機密保持 <span class="bg-amber-100 text-amber-700 text-xs px-2 py-0.5 rounded ml-1 border border-amber-200">最重要</span></div>
+  <div class="mb-2 text-slate-600">プロンプトに入れたデータは学習に使われる可能性がある。</div>
+  <div class="bg-white/90 p-2 rounded border border-rose-100">
+    <strong class="text-amber-700">やるべきこと：</strong>
+    <ul class="list-disc pl-3 mt-1 text-slate-600">
+      <li>顧客情報・個人情報は絶対に入力しない</li>
+      <li>社外秘データはマスキングしてから使う</li>
+      <li>学習オプトアウト済みの環境を使う</li>
+    </ul>
+  </div>
+</div>
+
+<div class="bg-rose-50/90 p-4 rounded border-t-4 border-sky-400">
+  <div class="font-bold text-sm mb-2 text-sky-700">⚖️ 権利の尊重</div>
+  <div class="mb-2 text-slate-600">AIの生成物が他者の著作権を侵害する可能性がある。</div>
+  <div class="bg-white/90 p-2 rounded border border-rose-100">
+    <strong class="text-sky-700">やるべきこと：</strong>
+    <ul class="list-disc pl-3 mt-1 text-slate-600">
+      <li>AIの生成物をそのまま納品しない</li>
+      <li>既存コンテンツとの類似をチェック</li>
+      <li>利用規約・ガイドラインを遵守</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 5. 情報漏洩 / セキュリティ観点
+
+## 情報入力のルール：何を入れていいか・ダメかの判断基準
+
+**迷ったら「もしこの情報がネットに流出したら？」と想像する。それが判断の原則**
+
+<div class="mt-4 text-xs text-left">
+
+| 分類 | イメージ | 具体例 | AI入力 |
+|:---|:---|:---|:---:|
+| **極秘** | 🔐 金庫の中 | 未発表の経営戦略、社員の個人情報、マイナンバー、ID/パスワード、システム設計書 | **❌ 禁止** |
+| **関係社外秘** | 🗄️ PJルームの鍵付きキャビネット | 顧客から預かった機密データ、顧客のステークホルダー情報 | **❌ 禁止** |
+| **社外秘** | 📁 社内の共有フォルダ | PJメール・チャット履歴、会議資料・議事メモ | **⚠️ マスキング必須** |
+| **公開** | 🌐 会社HP | 公開済みの会社紹介、採用情報、セミナー資料、プレスリリース | **✅ OK** |
+
+</div>
+
+<div class="mt-4 bg-rose-50/90 p-3 rounded border border-rose-200 text-xs text-left">
+  <strong class="text-rose-700">⚠️ 社外秘を入力する場合の鉄則：</strong> <span class="text-slate-600">企業名・個人名は必ずマスキング（例：「A社」「担当者X」）してから入力すること。</span>
+</div>
+
+<div class="mt-2 text-xs text-left bg-white/90 p-2 rounded border border-slate-200">
+  💡 <strong>簡単チェック：</strong>入力しようとしている情報に「人の名前」「会社の固有名」「未公開の数字」が含まれていたら、一度立ち止まって判断する。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 5. 情報漏洩 / セキュリティ観点
+
+## ハルシネーション対策の実践：3つの防御ライン
+
+**AIの出力は「優秀な新人のドラフト」。信頼するが、必ず検証する**
+
+<div class="grid grid-cols-3 gap-4 mt-6 text-left text-xs">
+
+<div class="bg-sky-50/90 p-4 rounded border border-sky-200">
+  <div class="text-3xl text-center mb-2">🎯</div>
+  <h3 class="font-bold text-sky-700 text-center mb-2">明確に (Clearly)</h3>
+  <div class="text-slate-600">質問を具体的にし、AIに「役割」を与える。曖昧な指示は曖昧な回答を生む。</div>
+  <div class="mt-2 bg-white/90 p-2 rounded border border-sky-100">
+    <strong class="text-sky-700">例：</strong><span class="text-slate-600">「〇〇について教えて」ではなく「〇〇業界のシニアアナリストとして、△△の市場規模を推計してください」</span>
+  </div>
+</div>
+
+<div class="bg-sky-50/90 p-4 rounded border border-sky-200">
+  <div class="text-3xl text-center mb-2">📋</div>
+  <h3 class="font-bold text-sky-700 text-center mb-2">文脈示して (Context)</h3>
+  <div class="text-slate-600">背景や目的（インプット）を十分に読み込ませる。AIは与えられた情報の範囲で回答する。</div>
+  <div class="mt-2 bg-white/90 p-2 rounded border border-sky-100">
+    <strong class="text-sky-700">例：</strong><span class="text-slate-600"> 参考資料をペーストし「この情報に基づいて回答してください。情報がない場合は『不明』と答えてください」</span>
+  </div>
+</div>
+
+<div class="bg-sky-50/90 p-4 rounded border border-sky-200">
+  <div class="text-3xl text-center mb-2">🔍</div>
+  <h3 class="font-bold text-sky-700 text-center mb-2">鵜呑みにしない (Verify)</h3>
+  <div class="text-slate-600">出力結果は必ず検証し、責任は自分が持つ。数値・出典・固有名詞は一次情報で確認。</div>
+  <div class="mt-2 bg-white/90 p-2 rounded border border-sky-100">
+    <strong class="text-sky-700">例：</strong><span class="text-slate-600"> AIが出した統計データは、元の調査レポートや公的データベースで裏を取る</span>
+  </div>
+</div>
+
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 5. 情報漏洩 / セキュリティ観点
+
+## 成果物に対する責任：「AIがそう言った」は通用しない
+
+**プロフェッショナルとして、最終成果物の品質は100%自分の責任**
+
+<div class="bg-white/90 p-4 rounded border border-slate-300 text-left mt-4 text-sm">
+  <strong class="text-slate-500">📋 リリース・提出前のチェックリスト</strong>
+  <ul class="list-none pl-2 mt-3 space-y-3 text-slate-600">
+    <li>☐ <strong class="text-sky-700">ファクトチェック</strong>：数値・日付・固有名詞を一次情報で裏取りしたか？</li>
+    <li>☐ <strong class="text-rose-700">情報セキュリティ</strong>：プロンプトに機密情報・個人情報を入力していないか？</li>
+    <li>☐ <strong class="text-amber-700">権利侵害</strong>：生成物が他社コンテンツ・著作物に酷似していないか？</li>
+    <li>☐ <strong class="text-slate-500">倫理チェック</strong>：差別的・暴力的・不適切な表現が含まれていないか？</li>
+    <li>☐ <strong class="text-slate-500">マスキング確認</strong>：社外秘情報の企業名・個人名をマスキングしたか？</li>
+  </ul>
+</div>
+
+<div class="mt-4 text-center bg-rose-50/90 p-3 rounded border border-rose-200 text-sm text-slate-600">
+  <strong class="text-rose-700">覚えておくべきこと：</strong>クライアントに提出する成果物にAI生成の誤りがあった場合、<br>
+  責任を取るのはAIではなく<strong>あなた自身</strong>です。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# 5. 情報漏洩 / セキュリティ観点
+
+## 困ったら相談：一人で抱えない
+
+**判断に迷ったら、まず相談。インシデントが起きたら、即報告**
+
+<div class="grid grid-cols-3 gap-4 mt-8 text-left text-xs">
+
+<div class="bg-sky-50/90 p-4 rounded text-center border border-sky-200">
+  <div class="text-3xl mb-3">💬</div>
+  <div class="font-bold text-sm mb-2 text-sky-700">AI利活用の相談</div>
+  <div class="mb-2 text-slate-600">「このデータ、AIに入れていい？」<br>「この使い方は問題ない？」</div>
+  <div class="bg-white/90 p-2 rounded font-mono text-xs text-slate-500 border border-sky-100">
+    Slackチャンネル<br>[WG] AI利活用
+  </div>
+</div>
+
+<div class="bg-sky-50/90 p-4 rounded text-center border border-sky-200">
+  <div class="text-3xl mb-3">🔧</div>
+  <div class="font-bold text-sm mb-2 text-sky-700">ツール利用可否の相談</div>
+  <div class="mb-2 text-slate-600">「この新しいAIツール、<br>業務で使っていい？」</div>
+  <div class="bg-white/90 p-2 rounded font-mono text-xs text-slate-500 border border-sky-100">
+    info_system<br>@gritwise.co.jp
+  </div>
+</div>
+
+<div class="bg-rose-50/90 p-4 rounded text-center border border-rose-200">
+  <div class="text-3xl mb-3">🚨</div>
+  <div class="font-bold text-sm mb-2 text-rose-700">インシデント発生時</div>
+  <div class="mb-2 text-slate-600">「機密情報を入力してしまった」<br>「情報漏洩の可能性がある」</div>
+  <div class="bg-white/90 p-2 rounded font-mono text-xs text-slate-500 border border-rose-100">
+    security-incident<br>@gritwise.co.jp
+  </div>
+</div>
+
+</div>
+
+<div class="mt-4 text-center text-sm font-bold text-slate-700">
+  🔑 迷ったら「入力しない」が正解。
+</div>
+
+---
+background: ./bg-gritwise.png
+---
+
+# まとめ
+
+## 今日からのアクション：習うより慣れろ
+
+**Next Step: まずは1日1回、業務で触れてみることから始める**
+
+<div class="mt-6 text-left text-sm">
+  <strong>Low Risk Tasks （失敗しても良いタスクで実験）</strong>
+  <ul class="list-disc pl-6 mt-2">
+    <li>メールの返信案作成（「丁寧な断り文を入れて」）</li>
+    <li>会議アジェンダの構成案作成</li>
+    <li>日報や長文資料の要約</li>
+  </ul>
+</div>
+
+<div class="mt-8 font-bold text-center">
+  プロンプトのコツ（勘所）を掴むには実践あるのみ。
+</div>
+
+---
+class: center middle
+background: ./bg-gritwise.png
+---
+
+# Future Outlook: 「対話」から「統合」へ
+
+<div class="text-left text-sm w-3/4 mx-auto mb-8">
+  <ul>
+    <li><strong>Chatbot</strong>: 単なる対話ツール</li>
+    <li><strong>Copilot</strong>: 人間の作業を支援する副操縦士</li>
+    <li><strong>Agent</strong>: 自律的にタスクをこなす代行者</li>
+  </ul>
+</div>
+
+AIは自律的エージェントへと進化するが、<br>
+価値判断の主体は常に人間である。
+
+**「伴走パートナー」として使いこなそう**
+
+---
+class: center middle
+---
+
+# Appendix
+
+---
+
+# Markdownとは？なにがいいの？
+
+**「構造化されたテキスト」により、人間とAIの共通言語として機能する**
+
+<div class="grid grid-cols-2 gap-4 mt-8 text-sm text-left">
+  <div class="bg-sky-50/90 p-4 rounded border border-sky-200">
+    <h3 class="font-bold text-sky-700 mb-2">🤖 AIとの親和性が抜群</h3>
+    <ul class="list-disc pl-4 space-y-2 text-slate-600">
+      <li>装飾情報（バイナリ）がないため、AIが構造を正確に理解できる</li>
+      <li>AIからの出力をそのままドキュメントとして再利用しやすい</li>
+    </ul>
+  </div>
+  <div class="bg-teal-50/90 p-4 rounded border border-teal-200">
+    <h3 class="font-bold text-teal-700 mb-2">⚙️ 効率的なドキュメント管理</h3>
+    <ul class="list-disc pl-4 space-y-2 text-slate-600">
+      <li>テキスト形式のため、Git等での差分管理（バージョン管理）が容易</li>
+      <li>Slidev/Marp等を使えば、1つのソースからスライドやPDFを生成可能</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+# Markdownとは？書き方の基本
+
+**シンプルな記号だけで、見やすく構造化された文書を作成可能**
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-[10px] text-left">
+  <div class="bg-white/90 p-3 rounded border border-slate-200">
+    <h3 class="font-bold text-sky-700 mb-2">基本の記法</h3>
+    <ul class="list-none space-y-1 text-slate-600">
+      <li>`# 見出し` (H1〜H6)</li>
+      <li>`- 箇条書き`</li>
+      <li>`1. 番号付きリスト`</li>
+      <li>`**強調（太字）**`</li>
+      <li>`[リンク名](URL)`</li>
+      <li>`![代替テキスト](画像URL)`</li>
+    </ul>
+  </div>
+  <div class="bg-white/90 p-3 rounded border border-slate-200">
+    <h3 class="font-bold text-sky-700 mb-2">エンジニア・AI向けの記法</h3>
+    <ul class="list-none space-y-1 text-slate-600">
+      <li>
+        <strong>コードブロック</strong><br>
+        <div class="mt-1">
+          \`\`\`python<br>
+          print("Hello World")<br>
+          \`\`\`
+        </div>
+      </li>
+      <li class="mt-2">
+        <strong>テーブル（表）</strong><br>
+        `| Header | Header |`
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-4 p-2 bg-amber-50 rounded border border-amber-200 text-[10px] text-center">
+  💡 Point: 記号の後に「半角スペース」を入れるのが正しく表示させるコツです。
+</div>
+
+---
+layout: center
+---
+
+# Sample Video
+
+<video controls width="600">
+  <source src="./samplevideo.mp4" type="video/mp4">
+</video>

@@ -1,0 +1,70 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Build Hands-on
+      - name: Install dependencies (hands-on)
+        working-directory: ./hands-on
+        run: npm install
+
+      - name: Build (hands-on)
+        working-directory: ./hands-on
+        run: npx slidev build --base /study-docs/hands-on/ --out dist
+
+      # Build Generative AI Training
+      - name: Install dependencies (gen-ai)
+        working-directory: ./生成AI研修
+        run: npm install
+
+      - name: Build (gen-ai)
+        working-directory: ./生成AI研修
+        run: npx slidev build --base /study-docs/gen-ai/ --out dist
+
+      # Prepare for Deployment
+      - name: Create artifact directory
+        run: |
+          mkdir public
+          mkdir public/hands-on
+          mkdir public/gen-ai
+          cp -r hands-on/dist/* public/hands-on/
+          cp -r 生成AI研修/dist/* public/gen-ai/
+          # Create a redirect to hands-on
+          echo '<meta http-equiv="refresh" content="0; url=./hands-on/">' > public/index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
