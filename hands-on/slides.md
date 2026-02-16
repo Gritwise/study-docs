@@ -214,12 +214,12 @@ background: ./bg-gritwise.png
 
 **まずは「注文データ」として何を保存するか（Entity）を定義します**
 
-`src/main/java/com/example/demoorder/Order.java` を作成
+`src/main/java/com/example/demo-order/Order.java` を作成
 
 <div class="overflow-y-auto h-[400px] text-xs">
 
 ```java
-package com.example.demoorder;
+package com.example.demo-order;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -252,12 +252,12 @@ background: ./bg-gritwise.png
 
 **DBへの読み書きを簡単にできる「Repository」を作成します**
 
-`src/main/java/com/example/demoorder/OrderRepository.java` を作成
+`src/main/java/com/example/demo-order/OrderRepository.java` を作成
 
 <div class="overflow-y-auto h-[400px] text-xs">
 
 ```java
-package com.example.demoorder;
+package com.example.demo-order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -279,12 +279,12 @@ background: ./bg-gritwise.png
 
 **ブラウザからのリクエストを受け付け、計算して保存する「Controller」を作成**
 
-`src/main/java/com/example/demoorder/OrderController.java` を作成
+`src/main/java/com/example/demo-order/OrderController.java` を作成
 
 <div class="overflow-y-auto h-[400px] text-xs">
 
 ```java
-package com.example.demoorder;
+package com.example.demo-order;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -329,12 +329,12 @@ background: ./bg-gritwise.png
 
 **APIのリクエストデータを受け取るためのクラス「OrderRequest」を作成**
 
-`src/main/java/com/example/demoorder/OrderRequest.java` を作成
+`src/main/java/com/example/demo-order/OrderRequest.java` を作成
 
 <div class="overflow-y-auto h-[400px] text-xs mt-6">
 
 ```java
-package com.example.demoorder;
+package com.example.demo-order;
 
 import lombok.Data;
 
